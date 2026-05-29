@@ -11,9 +11,8 @@ python code/run_simple_test.py
 
 this is the output it gives as of now :
 
-============================================================
 CLASSICAL AGENT - SIMPLE TEST RUN
-============================================================
+
 
 Loading data/test_data.csv...
 ✓ Loaded 100 days of data
