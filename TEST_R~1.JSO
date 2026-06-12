@@ -1,0 +1,11 @@
+{
+  "decision": "No",
+  "metrics": {
+    "total_return_%": -1.45,
+    "annualized_return_%": -3.62,
+    "annualized_vol_%": 14.72,
+    "sharpe_ratio": -0.246,
+    "max_drawdown_%": 9.9,
+    "avg_exposure_%": 100.0
+  }
+}
