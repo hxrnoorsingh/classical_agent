@@ -1,0 +1,6 @@
+variant,mean_stress,spearman_vs_full,top3
+full,0.128,1.0,"XLK, XLF, XLE"
+no_loss,0.1216,0.991,"XLK, XLE, XLF"
+no_shock,0.1223,1.0,"XLK, XLF, XLE"
+no_drawdown,0.0419,0.9,"XLE, XLF, XLK"
+no_memory,0.1137,1.0,"XLK, XLF, XLE"
