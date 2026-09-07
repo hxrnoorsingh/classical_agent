@@ -4,7 +4,7 @@
 
 **Title:** *Modelling Investor Irrationality*
 
-This document freezes the methodology for comparing professional sector recommendations with the project's computational investment agents before the advisor data are collected. Its purpose is to reduce researcher discretion and avoid changing the comparison rules after seeing which model performs best.
+This document freezes the methodology for comparing professional sector recommendations with the project's computational investment agents before the advisor data are analyzed. Its purpose is to reduce researcher discretion and avoid changing the comparison rules after seeing which model performs best.
 
 ## 1. Research question
 
@@ -66,26 +66,24 @@ SPY remains the benchmark and is not included as a sector recommendation.
 
 A sector not covered by an advisor is recorded as **missing**, not neutral.
 
-## 5. Advisor sample target
+## 5. Advisor sample
 
-The initial target is:
+The primary advisor sample is frozen at **two institutions**:
 
-- **4 professional institutions**
-- **up to 4 dated sector-outlook snapshots per institution**
-- preferably quarterly observations within a common period
-- up to 11 sectors per snapshot
+1. **Charles Schwab**
+2. **Wells Fargo Investment Institute**
 
-This implies a maximum initial design of approximately `4 × 4 × 11 = 176` institution-date-sector observations before missing sectors.
+Each institution contributes **four dated sector-outlook snapshots**, giving eight advisor snapshots in total. With 11 sectors per snapshot, the initial advisor dataset contains **88 institution-date-sector observations**.
 
-Institution selection must be based on data availability and methodological eligibility, not on observed agreement with any model.
+This is intentionally treated as a **small-sample comparative case study**, not as a representative sample of the professional-advisory industry. The design is adequate for testing whether the cognitive agent resembles these two professional advice systems more closely than the selected benchmarks, but it does not support broad population-level claims about all financial advisors.
 
-Potential institutions may include firms such as Schwab, Fidelity, J.P. Morgan, BlackRock, Vanguard, Morningstar, or other professional institutions that publish explicit dated sector views. Final inclusion depends on the criteria below.
+The sample is frozen before model-comparison results are examined. Additional institutions may be considered only as future extensions or robustness exercises and must not be mixed into the primary results without being clearly labeled as post hoc additions.
 
 ## 6. Publication inclusion criteria
 
 A publication is eligible for quantitative comparison only if all of the following hold:
 
-1. It is issued by an identifiable professional investment institution.
+1. It is issued by one of the two primary institutions.
 2. It has a clear publication date.
 3. It contains explicit sector-level investment views or recommendations.
 4. The recommendations represent the publishing institution's own views.
@@ -136,7 +134,7 @@ Within each institution-date snapshot:
 
 Average ranks are required for ties. No arbitrary alphabetical or ticker-based tie-breaking is allowed.
 
-Rank-based comparison is used because institutions employ different recommendation vocabularies and category counts.
+Rank-based comparison is used because the two institutions employ different recommendation vocabularies and category counts.
 
 ## 9. Computational models
 
@@ -229,7 +227,7 @@ Momentum B can be reported in a robustness table or appendix.
 
 ## 14. Aggregate model comparison
 
-Across all eligible advisor snapshots, summarize each model using:
+Across all eight eligible advisor snapshots, summarize each model using:
 
 - mean Spearman rank correlation;
 - median Spearman rank correlation;
@@ -238,7 +236,11 @@ Across all eligible advisor snapshots, summarize each model using:
 - mean bottom-three overlap;
 - number / proportion of advisor snapshots for which each model is the closest match.
 
+Results must also be reported separately for Schwab and Wells Fargo so one institution cannot silently dominate the pooled result.
+
 The cognitive hypothesis receives support if the cognitive agent shows systematically higher rank similarity and/or lower rank distance than both primary benchmarks. A single favorable advisor snapshot is not sufficient evidence.
+
+Because there are only eight snapshots from two institutions, emphasis should be placed on effect patterns and consistency rather than strong population-level statistical inference.
 
 ## 15. Missing sectors
 
@@ -258,17 +260,19 @@ Snapshots with fewer than **6 sectors** are excluded from the quantitative analy
 
 If professional recommendations align more closely with the cognitive model, the result may be described as:
 
-> Professional sector recommendations are more consistent with the behavioral mechanisms represented by the cognitive agent than with the selected mechanical benchmark models.
+> In this two-institution comparative case study, professional sector recommendations are more consistent with the behavioral mechanisms represented by the cognitive agent than with the selected mechanical benchmark models.
 
 ### Claims not supported by this design
 
 The study does not establish that:
 
 - an individual advisor is psychologically irrational;
+- Schwab or Wells Fargo as institutions are irrational;
 - the institution consciously exhibits loss aversion, drawdown regret, shock sensitivity, or memory;
 - the cognitive agent is a validated psychological measurement instrument;
 - cognitive similarity proves causality;
-- behavioral modelling necessarily improves financial performance.
+- behavioral modelling necessarily improves financial performance;
+- the two institutions are representative of professional advisors generally.
 
 Advisor positions may also reflect valuation, fundamentals, macroeconomic forecasts, mandates, client objectives, or information not contained in the computational agents.
 
@@ -277,11 +281,10 @@ Advisor positions may also reflect valuation, fundamentals, macroeconomic foreca
 The following are planned robustness checks rather than primary hypothesis tests:
 
 1. compare advisor rankings with Momentum B as well as Momentum A;
-2. examine whether results change when advisor snapshots with incomplete sector coverage are removed;
-3. report results separately by institution as well as pooled across institutions;
-4. inspect sensitivity to the 21-trading-day stance averaging window if time permits;
-5. inspect sensitivity to cognitive-agent parameter choices if time permits;
-6. distinguish results from periods of market stress from calmer periods if the sample becomes large enough.
+2. report results separately for Schwab and Wells Fargo as well as pooled;
+3. inspect sensitivity to the 21-trading-day stance averaging window if time permits;
+4. inspect sensitivity to cognitive-agent parameter choices if time permits;
+5. distinguish results from periods of market stress from calmer periods if the sample permits.
 
 Any robustness change made after viewing results must be labeled as exploratory unless it was specified here in advance.
 
@@ -291,6 +294,7 @@ This document is the pre-analysis coding and comparison rule for the advisor ext
 
 After advisor data collection begins, the following should not be changed merely because results favor or disfavor the hypothesis:
 
+- the two-institution primary sample;
 - five-point stance mapping;
 - minimum six-sector threshold;
 - use of average ranks for ties;
@@ -302,18 +306,23 @@ After advisor data collection begins, the following should not be changed merely
 
 A methodology change is allowed only to fix a genuine design flaw or address an unanticipated source format. Any such change must be documented with the reason and date.
 
-## 19. Initial data-collection target
+## 19. Frozen primary dataset target
 
-The next project task is to identify four institutions with suitable archived, dated sector outlooks and build the advisor dataset according to this methodology.
+The primary advisor dataset is:
 
-The preferred target is four snapshots per institution. If consistent quarterly histories are unavailable, use the largest comparable set available while preserving the eligibility rules and reporting the resulting sample size transparently.
+- Charles Schwab: 4 snapshots × 11 sectors = 44 observations
+- Wells Fargo Investment Institute: 4 snapshots × 11 sectors = 44 observations
+
+**Total: 8 advisor snapshots and 88 institution-date-sector observations.**
+
+No additional institution is required for the primary analysis.
 
 ## 20. Planned paper framing
 
 The advisor study should answer:
 
-**Which computational model best resembles professional sector recommendations?**
+**Which computational model best resembles the sector recommendations published by Schwab and Wells Fargo across the selected dated snapshots?**
 
-The broader paper, *Modelling Investor Irrationality*, uses the cognitive agent to operationalize selected behavioral-finance mechanisms and then asks whether the investment preferences produced by those mechanisms resemble professional human advice more closely than volatility-targeting or momentum alternatives.
+The broader paper, *Modelling Investor Irrationality*, uses the cognitive agent to operationalize selected behavioral-finance mechanisms and then asks whether the investment preferences produced by those mechanisms resemble these professional human advice systems more closely than volatility-targeting or momentum alternatives.
 
-The strongest defensible conclusion is about **behavioral consistency**, not proof of irrationality.
+The strongest defensible conclusion is about **behavioral consistency within the observed cases**, not proof of irrationality or industry-wide generalization.
