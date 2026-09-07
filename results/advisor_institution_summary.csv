@@ -1,0 +1,9 @@
+institution,model,mean_rho,mean_mard,valid_rho
+Charles Schwab,cognitive,0.3334043523882279,2.7954545454545454,4
+Charles Schwab,classical,0.026708778694850027,3.772727272727273,4
+Charles Schwab,momentumA,0.1963524643274705,3.3863636363636367,4
+Charles Schwab,momentumB,0.20454545454545456,2.6818181818181817,2
+Wells Fargo Investment Institute,cognitive,0.2353600092756599,3.0227272727272725,4
+Wells Fargo Investment Institute,classical,-0.11403012612934485,3.9318181818181817,4
+Wells Fargo Investment Institute,momentumA,0.2509736788417479,2.9318181818181817,4
+Wells Fargo Investment Institute,momentumB,0.462999,2.477272727272727,1
