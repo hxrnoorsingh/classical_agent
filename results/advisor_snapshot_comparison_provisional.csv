@@ -1,0 +1,9 @@
+institution,date,N,cognitive_rho,cognitive_mard,cognitive_top_overlap,cognitive_bottom_overlap,classical_rho,classical_mard,classical_top_overlap,classical_bottom_overlap,momentumA_rho,momentumA_mard,momentumA_top_overlap,momentumA_bottom_overlap,momentumB_rho,momentumB_mard,momentumB_top_overlap,momentumB_bottom_overlap
+Charles Schwab,2026-05-01,10,0.101365,3.000000,2,1,-0.392791,4.200000,0,0,0.139377,3.100000,1,1,0.465668,2.300000,0,1
+Charles Schwab,2026-05-29,10,-0.012930,3.500000,1,0,0.032325,3.500000,1,0,0.135767,3.200000,1,0,0.123797,2.700000,0,0
+Charles Schwab,2026-06-26,10,0.258603,2.600000,2,1,0.000000,3.700000,1,0,0.187487,3.200000,1,0,,2.400000,0,0
+Charles Schwab,2026-07-31,10,0.381440,2.500000,3,0,-0.071116,3.400000,1,0,0.084046,3.200000,1,0,,2.400000,0,0
+Wells Fargo Investment Institute,2024-12-10,10,0.441149,2.400000,3,0,-0.285450,3.700000,0,1,0.389249,2.200000,3,1,,2.400000,0,0
+Wells Fargo Investment Institute,2025-12-09,10,0.253895,2.500000,2,0,0.214834,2.800000,2,0,0.462220,2.400000,1,1,0.659738,1.800000,3,1
+Wells Fargo Investment Institute,2026-03-16,10,0.000000,3.100000,2,0,-0.325507,4.200000,0,0,0.091142,3.100000,1,1,,2.100000,0,0
+Wells Fargo Investment Institute,2026-06-16,10,-0.057208,3.500000,0,1,-0.114416,3.600000,1,1,0.139841,2.700000,0,1,,2.500000,0,0
